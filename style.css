@@ -7,6 +7,10 @@
 }
 body{
     font-family:'Poppins',sans-serif;
+    background-image:url(./assets/background.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 html{
     scroll-behavior: smooth;
@@ -354,7 +358,18 @@ footer{
 footer p {
     text-align:center;
 }
-.dark-mode{
-    background-color: black;
-    color:white;
+.revealable {
+    position: relative;
+    opacity: 0;  
+    transform: translateY(100px);  
+    transition: opacity 1s ease, transform 1s ease;  
+}
+
+.revealable.active {
+    opacity: 1;  
+    transform: translateY(0);  
+}
+
+#about,#experience, #projects, #contact {
+    scroll-margin-top: 100px; 
 }
